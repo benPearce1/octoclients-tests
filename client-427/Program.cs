@@ -21,10 +21,10 @@ namespace client_427
             var project = repository.Projects.GetAll().First();
 
 
-            string deploymentProcess = project.Link("DeploymentProcess");
+            //string deploymentProcess = project.Link("DeploymentProcess");
             
             //ConsoleHelpers.Dump(project.Links.Where(x => x.Key.Equals("DeploymentProcess")));
-            //KeyValuePair<string, Href> deploymentProcess = project.Links.Where(l => l.Key.Equals("DeploymentProcess")).FirstOrDefault();
+            KeyValuePair<string, Href> deploymentProcess = project.Links.Where(l => l.Key == "DeploymentProcess").FirstOrDefault();
 
             ConsoleHelpers.Dump(deploymentProcess);
 
